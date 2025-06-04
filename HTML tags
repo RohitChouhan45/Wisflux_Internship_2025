@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Extended HTML Tags Practice Page">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extended HTML Tags Practice</title>
+</head>
+
+<body>
+  <!-- Headings -->
+  <h1>Main Heading (h1)</h1>
+  <h2>Sub Heading (h2)</h2>
+  <h3>Section Heading (h3)</h3>
+  <h4>Subsection (h4)</h4>
+  <h5>Minor Heading (h5)</h5>
+  <h6>Smallest Heading (h6)</h6>
+
+  <!-- Text Formatting -->
+  <p>This is a <strong>bold</strong>, <em>italic</em>, <u>underlined</u>, and <mark>highlighted</mark> sentence.</p>
+  <p>This is <sup>superscript</sup> and <sub>subscript</sub>.</p>
+  <p>This is <del>deleted</del> and <ins>inserted</ins> text.</p>
+  <p><abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+  <p><cite>HTML5: The Missing Manual</cite> is a good book.</p>
+  <p>Keyboard input: <kbd>Ctrl + C</kbd></p>
+  <p>Variable: <var>x</var> = 10</p>
+  <p>Sample Output: <samp>Hello, world!</samp></p>
+  <blockquote cite="https://www.example.com">This is a blockquote.</blockquote>
+  <q>This is a short quote</q>
+  <pre>
+function hello() {
+  return "Hello, HTML!";
+}
+  </pre>
+  <hr>
+
+  <!-- Lists -->
+  <h3>Unordered List</h3>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+  </ul>
+
+  <h3>Ordered List</h3>
+  <ol>
+    <li>Learn HTML</li>
+    <li>Practice</li>
+  </ol>
+
+  <h3>Description List</h3>
+  <dl>
+    <dt>HTML</dt>
+    <dd>Markup Language</dd>
+    <dt>CSS</dt>
+    <dd>Stylesheets</dd>
+  </dl>
+
+  <!-- Links and Images -->
+  <a href="https://www.google.com" target="_blank">Visit Google</a>
+  <br>
+  <img src="https://via.placeholder.com/150" alt="Sample Image">
+
+  <!-- Table -->
+  <h3>Table Example</h3>
+  <table border="1">
+    <caption>User Data</caption>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Alice</td>
+        <td>25</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">Footer Row</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <!-- Forms -->
+  <h3>Form Example</h3>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob"><br><br>
+
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female<br><br>
+
+    <label>Languages Known:</label>
+    <input type="checkbox" name="lang" value="html"> HTML
+    <input type="checkbox" name="lang" value="css"> CSS<br><br>
+
+    <label for="range">Volume:</label>
+    <input type="range" id="range" name="range" min="0" max="100"><br><br>
+
+    <label for="color">Favorite Color:</label>
+    <input type="color" id="color" name="color"><br><br>
+
+    <label for="lang">Favorite Language:</label>
+    <select id="lang" name="lang">
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+    </select><br><br>
+
+    <textarea name="message" rows="4" cols="40">Enter your message here...</textarea><br><br>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </form>
+
+  <!-- Media -->
+  <h3>Media</h3>
+  <video width="300" controls>
+    <source src="sample.mp4" type="video/mp4">
+    Your browser does not support video.
+  </video>
+  <br>
+  <audio controls>
+    <source src="sample.mp3" type="audio/mp3">
+    Your browser does not support audio.
+  </audio>
+
+  <!-- Interactive Elements -->
+  <details>
+    <summary>Click to see more</summary>
+    <p>This is hidden detail shown when expanded.</p>
+  </details>
+
+  <dialog open>This is a dialog box.</dialog>
+
+  <!-- Semantic Elements -->
+  <header>
+    <h2>This is the Header</h2>
+  </header>
+
+  <nav>
+    <p>Navigation bar</p>
+  </nav>
+
+  <section>
+    <h3>Main Section</h3>
+    <p>This section contains info.</p>
+  </section>
+
+  <article>
+    <h3>Article Title</h3>
+    <p>This is an article about HTML.</p>
+  </article>
+
+  <aside>
+    <p>This is an aside content.</p>
+  </aside>
+
+  <figure>
+    <img src="https://via.placeholder.com/100" alt="Sample">
+    <figcaption>This is a figure caption.</figcaption>
+  </figure>
+
+  <footer>
+    <p>Footer content &copy; 2025</p>
+    <time datetime="2025-06-04">June 4, 2025</time>
+  </footer>
+
+</body>
+
+</html>
