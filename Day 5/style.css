@@ -88,12 +88,4 @@ body {
     background-color: #00796b;
 }
 
-/* Flexbox Layout Example */
-@media (min-width: 768px) {
-    .content, .form-section {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
 
