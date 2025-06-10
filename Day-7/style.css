@@ -1,0 +1,70 @@
+:root {
+  --bg-light: #eef2f3;
+  --bg-dark: #121212;
+  --text-light: #333;
+  --text-dark: #f0f0f0;
+  --card-light: white;
+  --card-dark: #1e1e1e;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.container {
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 30px;
+  background-color: var(--card-light);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .container {
+  background-color: var(--card-dark);
+}
+
+input {
+  padding: 10px;
+  width: 80%;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#greeting {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.clock {
+  margin-top: 20px;
+  font-size: 18px;
+  font-style: italic;
+  color: #888;
+}
