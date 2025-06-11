@@ -1,1 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dopefolio</title>
+    <link rel="stylesheet" href="style.css" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/jpeg/rohit-dp.jpg"
+              alt="Rohit CHouhan dp Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Rohit Chouhan</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projects
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="home-hero">
+      <div class="home-hero__content">
+        <h3 class="heading-primary">Hey, My name is</h3> 
+          <h1 class="heading-primary">Rohit Chouhan</h1>
+        <div class="home-hero__info">
+          <p class="text-primary">
+            Enthusiastic and detail-oriented Front-End Web Developer, creating and implementing innovative web designs and user experiences.
+             Proficient in HTML, CSS, and JavaScript. Adapt at collaborating with cross-functional teams to drive project success. 
+             Passionate about staying current with industry trends and technologies.
+          </p>
+        </div>
+        <div class="home-hero__cta">
+          <a href="./#projects" class="btn btn--bg">Projects</a>
+        </div>
+      </div>
+      <div class="home-hero__socials">
+        <div class="home-hero__social">
+          <a href="https://www.linkedin.com/in/rohit-chouhan-391739254/" class="home-hero__social-icon-link">
+            <img
+              src="./assets/png/linkedin-ico.png"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+        <div class="home-hero__social">
+          <a href="https://github.com/RohitChouhan45" class="home-hero__social-icon-link">
+            <img
+              src="./assets/png/github-ico.png"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+        <div class="home-hero__social">
+          <a href="#" class="home-hero__social-icon-link">
+            <img
+              src="./assets/png/twitter-ico.png"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+        <div class="home-hero__social">
+          <a
+            href="#"
+            class="home-hero__social-icon-link home-hero__social-icon-link--bd-none"
+          >
+            <img
+              src="./assets/png/insta-ico.png"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="about sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main">About Me</span>
+          <span class="heading-sec__sub">
+            Hey! It's
+            <strong>Rohit Chouhan</strong>
+            and I'm a <strong> Frontend Web Developer </strong> located in
+            Jaipur. I am student of 3rd year in information Technology at Arya College of Engineering and Information Technology.
+            I'm passionate about building web applications and solving problems. I'm a quick learner and a team player. I've done some project in my enginnering journey.
+          </span>
+        </h2>
+        <div class="about__content">
+          <div class="about__content-main">
+            <div class="about__content-details">
+            </div>
+            <div class="button-container">
+              <a href="./#contact" class="btn btn--bg btn--theme" style="margin-bottom: 10px;">Resume</a>
+              <a href="certificates.html" class="btn btn--bg btn--theme">Certifications</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+    
+    <section class="contact sec-pad dynamicBg" id="skills">
+      <div class="skill-heading">
+        
+        <span class="heading-sec__main"><strong>SKILLS</strong></span>
+      </div>
+      <div class="skill-contant">
+          <!-- Skill category Wise -->
+          <div class="skill-name">
+              <div class="skill-name-heading">
+                  <h2>Programming Languages</h2>
+              </div>
+              <div class="skill-dashboard">
+                  <!-- Sub Skills in that Category -->
+                  <div class="sub-skill">
+                      <div class="sub-skill-name">
+                          <h3>C</h3>
+                      </div>
+                      <div class="sub-skill-bar">
+                          <div class="sub-skill-bar-fill" style="width: 50%;"></div>
+                      </div>
+                  </div>
+                  <div class="sub-skill">
+                      <div class="sub-skill-name">
+                          <h3>C++</h3>
+                      </div>
+                      <div class="sub-skill-bar">
+                          <div class="sub-skill-bar-fill" style="width: 70%;"></div>
+                      </div>
+                  </div>
+                  <div class="sub-skill">
+                      <div class="sub-skill-name">
+                          <h3>Python</h3>
+                      </div>
+                      <div class="sub-skill-bar">
+                          <div class="sub-skill-bar-fill" style="width: 80%;"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+         
+
+          <div class="skill-name">
+              <div class="skill-name-heading">
+                  <h2>Frontend Development</h2>
+              </div>
+              <div class="skill-dashboard">
+                  <div class="sub-skill">
+                      <div class="sub-skill-name">
+                          <h3>HTML</h3>
+                      </div>
+                      <div class="sub-skill-bar">
+                          <div class="sub-skill-bar-fill" style="width: 90%;"></div>
+                      </div>
+                  </div>
+                  <div class="sub-skill">
+                      <div class="sub-skill-name">
+                          <h3>CSS</h3>
+                      </div>
+                      <div class="sub-skill-bar">
+                          <div class="sub-skill-bar-fill" style="width: 90%;"></div>
+                      </div>
+                  </div>
+                  <div class="sub-skill">
+                      <div class="sub-skill-name">
+                          <h3>JavaScript</h3>
+                      </div>
+                      <div class="sub-skill-bar">
+                          <div class="sub-skill-bar-fill" style="width: 80%;"></div>
+                      </div>
+                  </div>
+                  
+              </div>
+          </div>
+
+          <div class="skill-name">
+              <div class="skill-name-heading">
+                  <h2>DataBase</h2>
+              </div>
+              <div class="skill-dashboard">
+                  <!-- Sub Skills in that Category -->
+                  <div class="sub-skill">
+                      <div class="sub-skill-name">
+                          <h3>SQL</h3>
+                      </div>
+                      <div class="sub-skill-bar">
+                          <div class="sub-skill-bar-fill" style="width: 65%;"></div>
+                      </div>
+                  </div>
+                  
+              </div>
+          </div>
+
+          <div class="skill-name">
+              <div class="skill-name-heading">
+                  <h2>DSA</h2>
+              </div>
+              <div class="skill-dashboard">
+                  <!-- Sub Skills in that Category -->
+                  <div class="sub-skill">
+                      <div class="sub-skill-name">
+                          <h3>Data Structures and Algorithms</h3>
+                      </div>
+                      <div class="sub-skill-bar">
+                          <div class="sub-skill-bar-fill" style="width: 75%;"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="skill-name">
+              <div class="skill-name-heading">
+                  <h2>Version Control</h2>
+              </div>
+              <div class="skill-dashboard">
+                  <!-- Sub Skills in that Category -->
+                  <div class="sub-skill">
+                      <div class="sub-skill-name">
+                          <h3>Git</h3>
+                      </div>
+                      <div class="sub-skill-bar">
+                          <div class="sub-skill-bar-fill" style="width: 80%;"></div>
+                      </div>
+                  </div>
+                  <div class="sub-skill">
+                      <div class="sub-skill-name">
+                          <h3>GitHub</h3>
+                      </div>
+                      <div class="sub-skill-bar">
+                          <div class="sub-skill-bar-fill" style="width: 85%;"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+    </section>
+    
+    
+    <section id="projects" class="projects sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-bg">
+          <span class="heading-sec__main">Projects</span>
+          <span class="heading-sec__sub">
+            these are some project, i want to show You
+          </span>
+        </h2>
+
+        <div class="projects__content"></div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/png/finance tracker.png"
+                alt=""
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Finance tracker</h3>
+              <p class="projects__row-content-desc">
+                Track your financial health with ease! This tracker provides 
+                a monthly overview, spending analysis, and key metrics like your largest expense.
+              </p>
+              <a
+                href="project-1.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >Case Study</a>
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/png/todoimage.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">To-Do-list</h3>
+              <p class="projects__row-content-desc">
+                A To-Do List is a simple, organized tool used to track tasks, goals, 
+                or items that need to be completed. It helps individuals stay organized 
+                and focused by providing a clear outline of what needs to be done.
+              </p>
+              <a
+                href="project-4.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >Case Study</a
+              >
+            </div>
+          </div>
+          <div class="projects__content"></div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/png/youtube.png"
+                alt=""
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">DevTube</h3>
+              <p class="projects__row-content-desc">
+                This project is a front-end clone of YouTube, designed to replicate the user interface and 
+                core features of the popular video-sharing platform. Built with modern front-end technologies.
+              </p>
+              <a
+                href="project-2.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >Case Study</a>
+            </div>
+          </div>
+        
+          <div class="projects__content">
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/png/amazon2.0.png"
+                alt=""
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Amazarian - E-commerce site</h3>
+              <p class="projects__row-content-desc">
+                this is a clone of amazon website. it has all the features of amazon website like user registration, login, product listing, product details.
+              </p>
+              <a
+                href="project-3.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >Case Study</a
+              >
+            </div>
+          </div>
+          
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/png/amazon.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">amazon-clone</h3>
+              <p class="projects__row-content-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                facilis tempora, explicabo quae quod deserunt eius sapiente
+                praesentium.
+              </p>
+              <a
+                href="./project-5.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >Case Study</a
+              >
+            </div>
+          </div>
+          
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/png/netflix.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Netflix-Clone</h3>
+              <p class="projects__row-content-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                facilis tempora, explicabo quae quod deserunt eius sapiente
+                praesentium.
+              </p>
+              <a
+                href="./project-6.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >Case Study</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/png/numberguess.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Number-Guessing-Game</h3>
+              <p class="projects__row-content-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                facilis tempora, explicabo quae quod deserunt eius sapiente
+                praesentium.
+              </p>
+              <a
+                href="./project-7.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >Case Study</a
+              >
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+    
+
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/rohit-chouhan-391739254/">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/RohitChouhan45">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/twitter-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon main-footer__icon--mr-none"
+                  src="./assets/png/insta-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Rohit Chouhan</h4>
+            <p class="main-footer__short-desc">
+              Follow me on linkedin and github for more projects.
+            </p>
+          </div>
+        </div>
+
+        </div>
+      </div>
+      <div class="main-footer__lower">
+        Made by
+       <a rel="noreferrer" target="_blank" href="https://github.com/rohitchouhan45"
+         >Rohit Chouhan</a
+       >
+     </div>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
