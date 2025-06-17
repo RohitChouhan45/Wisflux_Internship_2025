@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="title">Calculator</div>
+    <div class="display">
+      <div class="previous-operand" id="previous-operand"></div>
+      <div class="current-operand" id="current-operand">0</div>
+    </div>
+    <div class="buttons">
+      <button class="btn clear" onclick="clearAll()">AC</button>
+      <button class="btn delete" onclick="deleteLast()">DEL</button>
+      <button class="btn operator" onclick="chooseOperation('÷')">÷</button>
+      <button class="btn operator" onclick="chooseOperation('×')">×</button>
+      
+      <button class="btn" onclick="appendNumber('7')">7</button>
+      <button class="btn" onclick="appendNumber('8')">8</button>
+      <button class="btn" onclick="appendNumber('9')">9</button>
+      <button class="btn operator" onclick="chooseOperation('-')">-</button>
+      
+      <button class="btn" onclick="appendNumber('4')">4</button>
+      <button class="btn" onclick="appendNumber('5')">5</button>
+      <button class="btn" onclick="appendNumber('6')">6</button>
+      <button class="btn operator" onclick="chooseOperation('+')">+</button>
+      
+      <button class="btn" onclick="appendNumber('1')">1</button>
+      <button class="btn" onclick="appendNumber('2')">2</button>
+      <button class="btn" onclick="appendNumber('3')">3</button>
+      <button class="btn equals" onclick="calculate()">=</button>
+      
+      <button class="btn" onclick="appendNumber('0')" style="grid-column: span 2;">0</button>
+      <button class="btn" onclick="appendNumber('.')">.</button>
+    </div>
+  </div>
+
+  <script>
+    let currentOperand = '0';
+    let previousOperand = '';
+    let operation = undefined;
+    let shouldResetScreen = false;
+
+    const currentOperandElement = document.getElementById('current-operand');
+    const previousOperandElement = document.getElementById('previous-operand');
+
+    function clearAll() {
+      currentOperand = '0';
+      previousOperand = '';
+      operation = undefined;
+      updateDisplay();
+    }
+
+    function deleteLast() {
+      if (currentOperand.length === 1) {
+        currentOperand = '0';
+      } else {
+        currentOperand = currentOperand.slice(0, -1);
+      }
+      updateDisplay();
+    }
+
+    function appendNumber(number) {
+      if (number === '.' && currentOperand.includes('.')) return;
+      if (shouldResetScreen) {
+        currentOperand = '';
+        shouldResetScreen = false;
+      }
+      if (currentOperand === '0' && number !== '.') {
+        currentOperand = number;
+      } else {
+        currentOperand += number;
+      }
+      updateDisplay();
+    }
+
+    function chooseOperation(selectedOperation) {
+      if (currentOperand === '') return;
+      if (previousOperand !== '') {
+        calculate();
+      }
+      operation = selectedOperation;
+      previousOperand = currentOperand;
+      shouldResetScreen = true;
+      updateDisplay();
+    }
+
+    function calculate() {
+      if (previousOperand === '' || currentOperand === '') return;
+      
+      const prev = parseFloat(previousOperand);
+      const current = parseFloat(currentOperand);
+      let computation;
+
+      switch (operation) {
+        case '+':
+          computation = prev + current;
+          break;
+        case '-':
+          computation = prev - current;
+          break;
+        case '×':
+          computation = prev * current;
+          break;
+        case '÷':
+          if (current === 0) {
+            alert('Cannot divide by zero!');
+            return;
+          }
+          computation = prev / current;
+          break;
+        default:
+          return;
+      }
+
+      // Send calculation to server
+      fetch('/calculate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          num1: prev,
+          num2: current,
+          operation: operation === '×' ? '*' : operation === '÷' ? '/' : operation
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        currentOperand = data.result;
+        operation = undefined;
+        previousOperand = '';
+        shouldResetScreen = true;
+        updateDisplay();
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        currentOperand = computation.toString();
+        operation = undefined;
+        previousOperand = '';
+        shouldResetScreen = true;
+        updateDisplay();
+      });
+    }
+
+    function updateDisplay() {
+      currentOperandElement.textContent = currentOperand;
+      if (operation != null) {
+        previousOperandElement.textContent = `${previousOperand} ${operation}`;
+      } else {
+        previousOperandElement.textContent = '';
+      }
+    }
+
+    // Keyboard support
+    document.addEventListener('keydown', (e) => {
+      if (e.key >= '0' && e.key <= '9' || e.key === '.') {
+        appendNumber(e.key);
+      } else if (e.key === '+' || e.key === '-') {
+        chooseOperation(e.key);
+      } else if (e.key === '*') {
+        chooseOperation('×');
+      } else if (e.key === '/') {
+        e.preventDefault();
+        chooseOperation('÷');
+      } else if (e.key === 'Enter' || e.key === '=') {
+        calculate();
+      } else if (e.key === 'Backspace') {
+        deleteLast();
+      } else if (e.key === 'Escape') {
+        clearAll();
+      }
+    });
+
+    // Initialize display
+    updateDisplay();
+  </script>
+</body>
+</html> 
