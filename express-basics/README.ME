@@ -1,9 +1,8 @@
 
-# 🚀 Express.js RESTful API – Complete Guide & Example
+# Express.js RESTful API –
 
-![Express.js](https://expressjs.com/images/express-facebook-share.png)
 
-## 📖 Overview
+## Overview
 
 **Express.js** is a lightweight and flexible web framework for Node.js used to build fast and scalable backend applications and APIs. It supports robust routing, middleware integration, JSON parsing, and more.
 
@@ -16,7 +15,7 @@ In this project, we will:
 
 ---
 
-## 📚 Topics Covered
+## Topics Covered
 
 1. ✅ Introduction to RESTful APIs
 2. ✅ Understanding CRUD operations (Create, Read, Update, Delete)
@@ -27,7 +26,7 @@ In this project, we will:
 
 ---
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 - Understand **RESTful API design principles**
 - Implement **CRUD operations** using Express routes
@@ -38,7 +37,7 @@ In this project, we will:
 
 ---
 
-## ⚙️ Technologies Used
+## Technologies Used
 
 - **Node.js**
 - **Express.js**
@@ -47,9 +46,8 @@ In this project, we will:
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 
-```
 express-api/
 │
 ├── controllers/             # Handles business logic
@@ -64,11 +62,10 @@ express-api/
 ├── package.json
 ├── README.md
 └── server.js               # App entry point
-```
-
 ---
 
-## 📦 Installation & Setup
+
+##  Installation & Setup
 
 ### 1. Clone the Repository
 
@@ -87,13 +84,11 @@ npm install --save-dev nodemon
 
 ### 3. Create `.env` File
 
-```
 PORT=3000
-```
 
 ---
 
-## 🚀 Start the Server
+## Start the Server
 
 ### For Development
 
@@ -111,7 +106,7 @@ Visit: [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## 🧠 What is RESTful API?
+## What is RESTful API?
 
 A **RESTful API** is an architectural style for building web services that use HTTP methods to access and manipulate data. It is based on **resources** identified by **URLs**, and uses standard methods like:
 
@@ -124,7 +119,7 @@ A **RESTful API** is an architectural style for building web services that use H
 
 ---
 
-## 🛠 Express App Setup
+## Express App Setup
 
 ### `server.js`
 
@@ -155,7 +150,7 @@ app.listen(PORT, () => {
 
 ---
 
-## 🧾 CRUD Example: User Controller
+## CRUD Example: User Controller
 
 ### `controllers/userController.js`
 
@@ -198,7 +193,7 @@ exports.deleteUser = (req, res) => {
 
 ---
 
-## 🗺 Route Configuration
+## Route Configuration
 
 ### `routes/userRoutes.js`
 
@@ -219,7 +214,7 @@ module.exports = router;
 
 ---
 
-## 📬 API Endpoints Summary
+## API Endpoints Summary
 
 | Method | URL                | Description         |
 |--------|--------------------|---------------------|
@@ -231,7 +226,7 @@ module.exports = router;
 
 ---
 
-## 🧪 Testing with Postman
+## Testing with Postman
 
 1. Launch [Postman](https://www.postman.com/)
 2. Make API calls:
@@ -252,7 +247,7 @@ module.exports = router;
 
 ---
 
-## 🧩 Understanding `express.json()`
+## Understanding `express.json()`
 
 - `express.json()` is middleware that parses incoming requests with JSON payloads and makes the data available in `req.body`.
 
@@ -262,7 +257,7 @@ app.use(express.json());
 
 ---
 
-## 📏 Best Practices
+## Best Practices
 
 - ✅ Use `.env` for environment variables
 - ✅ Use routers to separate concerns
@@ -274,7 +269,7 @@ app.use(express.json());
 
 ---
 
-## 🛡 Optional Enhancements
+## Optional Enhancements
 
 Install helpful libraries:
 
@@ -293,20 +288,6 @@ app.use(cors());
 app.use(helmet());
 app.use(morgan('dev'));
 ```
-
----
-
-## 📄 License
-
-MIT License – feel free to use, modify, and distribute.
-
----
-
-## 👤 Author
-
-**Rohit Chouhan**  
-📫 GitHub: [@your-username](https://github.com/your-username)  
-📧 Email: your.email@example.com
 
 ---
 
