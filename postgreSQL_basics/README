@@ -1,0 +1,22 @@
+# PostgreSQL Basics
+
+This project contains SQL scripts to practice basic PostgreSQL operations.
+
+## Files
+
+- `create_tables.sql`: Defines a `students` table with fields like name, email, age, and enrollment date.
+- `insert_queries.sql`: Contains `INSERT` queries to populate the table with sample data.
+- `sample_selects.sql`: Demonstrates `SELECT`, `UPDATE`, and `DELETE` queries.
+
+## How to Use
+
+1. Open pgAdmin or any PostgreSQL client.
+2. Create a new database (e.g., `intern_db`).
+3. Run the scripts in order:
+   - `create_tables.sql`
+   - `insert_queries.sql`
+   - `sample_selects.sql`
+
+## Author
+
+Rohit Chouhan – 23 June 2025
