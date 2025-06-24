@@ -1,22 +1,41 @@
-# PostgreSQL Basics
+# PostgreSQL Practice – Basics + Relationships
 
-This project contains SQL scripts to practice basic PostgreSQL operations.
+This project contains SQL scripts to help you learn and practice PostgreSQL fundamentals along with relational concepts and JOIN queries.
 
-## Files
+## 📁 Folder Structure
 
-- `create_tables.sql`: Defines a `students` table with fields like name, email, age, and enrollment date.
-- `insert_queries.sql`: Contains `INSERT` queries to populate the table with sample data.
-- `sample_selects.sql`: Demonstrates `SELECT`, `UPDATE`, and `DELETE` queries.
+- `create_tables.sql` – Create a basic `students` table  
+- `insert_queries.sql` – Insert sample data into `students`  
+- `sample_selects.sql` – Run `SELECT`, `UPDATE`, `DELETE` on `students`  
+- `create_related_tables.sql` – Create `students`, `courses`, and `enrollments` with foreign key relationships  
+- `insert_sample_data.sql` – Insert sample data into all three related tables  
+- `join_queries.sql` – Practice `INNER JOIN`, `LEFT JOIN`, and `RIGHT JOIN`
 
-## How to Use
+## ✅ Topics Covered
 
-1. Open pgAdmin or any PostgreSQL client.
-2. Create a new database (e.g., `intern_db`).
-3. Run the scripts in order:
-   - `create_tables.sql`
-   - `insert_queries.sql`
-   - `sample_selects.sql`
+### Day 1 (23 June 2025) – PostgreSQL Basics
+- Installing PostgreSQL and using pgAdmin  
+- Creating a database and simple table  
+- Running basic SQL operations:  
+  `CREATE`, `INSERT`, `SELECT`, `UPDATE`, `DELETE`  
+- Understanding constraints like `PRIMARY KEY`, `UNIQUE`, `NOT NULL`
 
-## Author
+### Day 2 (24 June 2025) – Relationships & JOINs
+- Creating multiple related tables using foreign keys  
+- Building `enrollments` table to link `students` and `courses`  
+- Practicing:
+  - `INNER JOIN`: common data between two or more tables  
+  - `LEFT JOIN`: all data from left table and matched records from right  
+  - `RIGHT JOIN`: all data from right table and matched records from left
 
-Rohit Chouhan – 23 June 2025
+## 🛠 How to Use
+
+1. Open pgAdmin or any PostgreSQL SQL client.
+2. Run the files in order based on your topic of interest.
+3. You can mix and extend queries for deeper understanding.
+
+## 🙋 Author
+
+Rohit Chouhan  
+Wisflux Internship  
+23–24 June 2025
