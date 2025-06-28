@@ -1,7 +1,6 @@
 # React Authentication Project – Basics + Advanced
 
 This project demonstrates both the **basic concepts of React** and more **advanced implementations** like Context API, React Router, and protected routes.
-
 ---
 
 ## Learning Breakdown
