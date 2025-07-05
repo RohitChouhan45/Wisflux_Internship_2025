@@ -19,11 +19,6 @@ src/
 └── files.service.ts
 .env
 
-makefile
-Always show details
-
-Copy
-
 ## ⚙️ Environment Variables
 
 Create a `.env` file in the root:
@@ -34,44 +29,30 @@ AWS_ACCESS_KEY_ID=your-access-key
 AWS_SECRET_ACCESS_KEY=your-secret-key
 AWS_S3_BUCKET=your-bucket-name
 PORT=3000
+```
+
 📦 Install Dependencies
-bash
-Always show details
+```npm install```
 
-Copy
-npm install
 ▶️ Run the Server
-bash
-Always show details
-
-Copy
+```
 npm run start
+```
 📤 API Usage
 Endpoint
-bash
-Always show details
-
-Copy
+```
 POST /files/upload
+```
 Body
-FormData:
-
-file: The file to upload
+- FormData:
+   - file: The file to upload
 
 Example (Postman)
-Choose POST
-
-URL: http://localhost:3000/files/upload
-
-Body → form-data → Key: file, Type: File
+- Choose POST
+- URL: http://localhost:3000/files/upload
+- Body → form-data → Key: file, Type: File
 
 🔐 Generating Pre-Signed URLs
 Optional method in FilesService for generating upload links:
+```generatePresignedUrl('filename.jpg');```
 
-ts
-Always show details
-
-Copy
-generatePresignedUrl('filename.jpg');
-🧾 License
-This project is licensed under MIT.
